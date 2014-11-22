@@ -20,7 +20,7 @@
 <template name="movieList">
     <ul>
         {{#each movie}}
-        <li><a class="btn btn-xs btn-info" href="{{path}}"><span class="glyphicon glyphicon-link"></span>{{title}}</a><a href="#" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a></li>
+        <li><a class="btn btn-xs btn-info" href="{{path}}" target="_blank"><span class="glyphicon glyphicon-link"></span>{{title}}</a><a href="#" class="btn btn-xs btn-danger remove"><span class="glyphicon glyphicon-trash"></span> Delete</a></li>
         {{/each}}
     </ul>
 </template>

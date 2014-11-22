@@ -30,6 +30,12 @@ if(Meteor.isClient) {
     }
     });
     
+      Template.movieList.helpers({
+        'movie': function() {
+            return Movies.find()
+        }
+    });
+    
     Template.addMovie.events({
         'submit form': function(event){
             event.preventDefault();
@@ -44,11 +50,12 @@ if(Meteor.isClient) {
         }
     });
     
-    Template.movieList.helpers({
-        'movie': function() {
-            return Movies.find()
+    Template.movieList.events({
+        'click .remove': function(event){
+            Movies.remove(this._id);
         }
-    });
+    })    
+  
     
     
     
