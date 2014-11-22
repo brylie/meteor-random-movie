@@ -7,3 +7,7 @@ iframe {
 div {
     margin-bottom: 20px;
 }
+
+ul li {
+    list-style-type: none;
+}
