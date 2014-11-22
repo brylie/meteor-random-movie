@@ -1,0 +1,35 @@
+<head>
+  <title>Random Movie Selection</title>
+</head>
+
+<body>
+  <h1>Random Movie App!</h1>
+    {{> addMovie}}
+    {{> randomMovie}}
+    {{> movieList}}
+    
+</body>
+<template name="addMovie">
+    <form>
+        <input type="text" name="movieTitle">
+        <input type="text" name="movieUrl">
+        <input type="submit" value="Add Movie">
+    </form>
+</template>
+
+<template name="movieList">
+    <ul>
+        {{#each movie}}
+        <li><a href="{{path}}">{{title}}</a><span>  delete</span></li>
+        {{/each}}
+    </ul>
+</template>
+
+<template name="randomMovie">
+    <div>
+        
+        <input type="button" class="randomize" value="Get Random Movie">
+        
+    </div>
+    <a href="{{movie}}">{{movie}}</a>
+</template>
