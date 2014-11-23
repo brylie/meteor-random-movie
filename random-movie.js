@@ -37,6 +37,7 @@ if(Meteor.isClient) {
     });
     
     Template.addMovie.events({
+        // adding title and link to movie
         'submit form': function(event){
             event.preventDefault();
             var movieTitle = event.target.movieTitle.value;
@@ -47,10 +48,14 @@ if(Meteor.isClient) {
                 title: movieTitle,
                 path: movieUrl
             });
+            // clearing previous inputs 
+            event.target.movieTitle.value = "";
+            event.target.movieUrl = "";
         }
     });
     
     Template.movieList.events({
+        // remove movie
         'click .remove': function(event){
             Movies.remove(this._id);
         }
