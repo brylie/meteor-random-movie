@@ -11,17 +11,17 @@
 </body>
 <template name="addMovie">
     <div class="panel panel-primary addMovieBlock">
-      <div class="panel-heading">
+      <div class="panel-heading addMovieBlockTitle">
         <h3 class="panel-title">Add a new movie to the list</h3>
       </div>
       <form id="addMovieForm">
         <div class="form-group">
-          <label for="movieTitle" class="control-label">Movie Title</label>
+          <label for="movieTitle" class="control-label">Movie Title:</label>
           <input type="text" name="movieTitle" class="form-control">
           <span class="help-block">Enter the movie title as it should appear in a movie list.</span>
         </div>
         <div class="form-group">
-          <label for="movieUrl" class="control-label">Movie Url</label>
+          <label for="movieUrl" class="control-label">Movie Url:</label>
           <input type="text" name="movieUrl" class="form-control">
           <span class="help-block">Enter the movie address. E.g. http://example.com/movie</span>
         </div>
@@ -31,21 +31,30 @@
 </template>
 
 <template name="movieList">
-    <ul>
+    <ul class="list-group">
         {{#each movie}}
-        <li><a class="btn btn-info btn-block" href="{{path}}" target="_blank"><span class="glyphicon glyphicon-link"></span>{{title}}</a><a href="#" class="btn btn-xs btn-danger remove"><span class="glyphicon glyphicon-trash"></span> Delete</a></li>
+        <li class="list-group-item">
+            <div class="btn-group btn-block movieListLinks" role="group">
+                <a class="btn btn-info" href="{{path}}" target="_blank">
+                    <span class="glyphicon glyphicon-link"></span>{{title}}
+                </a>
+                <a href="#" class="btn btn-danger remove">
+                    <span class="glyphicon glyphicon-trash"></span> Delete
+                </a>
+            </div>
+        </li>
         {{/each}}
     </ul>
 </template>
 
 <template name="randomMovie">
     <div class="panel panel-warning">
-      <div class="panel-heading">
+      <div class="panel-heading randomizeBlockTitle">
         <h3 class="panel-title"><span class="glyphicon glyphicon-eye-open"></span> Watch a random movie now</h3>
       </div>
-      <a href="#" class="btn btn-warning randomize"><span class="glyphicon glyphicon-film"></span> Get random movie</a>
+      <button type="submit" class="btn btn-warning btn-block randomize"><span class="glyphicon glyphicon-film"></span> Get random movie</button>
     </div>
     <div class="well">
-      <a href="{{movie}}"><span class="glyphicon glyphicon-star-empty"</span> {{movie}}</a>
+      <a href="{{movie}}"><span class="glyphicon glyphicon-star-empty"></span> {{movie}}</a>
     </div>
 </template>

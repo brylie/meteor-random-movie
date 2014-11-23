@@ -50,7 +50,7 @@ if(Meteor.isClient) {
             });
             // clearing previous inputs 
             event.target.movieTitle.value = "";
-            event.target.movieUrl = "";
+            event.target.movieUrl.value = "";
         }
     });
     
