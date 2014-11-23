@@ -14,4 +14,7 @@ ul {
 
 .addMovieBlock {
     width: 500px;
+    background: #f5f5f5;
+    border-color: transparent;
+    box-shadow: 0px 0px 10px #999;
 }
