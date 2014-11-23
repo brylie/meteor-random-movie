@@ -31,7 +31,7 @@
 </template>
 
 <template name="movieList">
-    <ul class="list-group">
+    <ul class="list-group moviesToWatchBlock">
         {{#each movie}}
         <li class="list-group-item">
             <div class="btn-group btn-block movieListLinks" role="group">
@@ -53,10 +53,13 @@
         <h3 class="panel-title"><span class="glyphicon glyphicon-eye-open"></span> Watch a random movie now</h3>
       </div>
       <button type="submit" class="btn btn-warning btn-block randomize"><span class="glyphicon glyphicon-film"></span> Get random movie</button>
+        {{#if movie}}
+            <div class="well randomMovieBlock">
+                <a href="{{movie.path}}">
+                    <span class="glyphicon glyphicon-star-empty"></span> {{movie.title}}
+                </a>
+            </div>
+        {{/if}}
     </div>
-    <div class="well">
-        <a href="{{movie}}">
-            <span class="glyphicon glyphicon-star-empty"></span> {{movie}}
-        </a>
-    </div>
+    
 </template>
