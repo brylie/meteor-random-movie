@@ -1,13 +1,17 @@
-iframe {
-    width: 90%;
-    height: 500px;
-    position: absolute;
-}
-
-div {
-    margin-bottom: 20px;
+body {
+    width: 500px;
+    margin: auto;
+    background: #f2f2f2;
 }
 
 ul li {
     list-style-type: none;
+}
+
+ul {
+    padding: 0;
+}
+
+.addMovieBlock {
+    width: 500px;
 }
