@@ -23,11 +23,10 @@ if(Meteor.isClient) {
 			
 			// Select random person
 			var movie = movies[randomInt];
-        
-            // set session var with movie path
-            Session.set('moviePath', movie.path);
-            console.log(Session.get('moviePath'));
-    }
+			
+			// return the movie
+			return movie
+    	}
     });
     
       Template.movieList.helpers({
