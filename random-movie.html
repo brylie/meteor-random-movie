@@ -10,7 +10,10 @@
     
 </body>
 <template name="addMovie">
-  <div class="well addMovieBlock">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Add a new movie to the list</h3>
+      </div>
       <form id="addMovieForm">
         <div class="form-group">
           <label for="movieTitle" class="control-label">Movie Title</label>
@@ -36,10 +39,13 @@
 </template>
 
 <template name="randomMovie">
-    <div>
-        
-        <input type="button" class="randomize" value="Get Random Movie">
-        
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-eye-open"></span> Watch a random movie now</h3>
+      </div>
+      <a href="#" class="btn btn-warning randomize"><span class="glyphicon glyphicon-film"></span> Get random movie</a>
     </div>
-    <a href="{{movie}}">{{movie}}</a>
+    <div class="well">
+      <a href="{{movie}}">{{movie}}</a>
+    </div>
 </template>
