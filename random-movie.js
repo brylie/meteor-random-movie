@@ -25,7 +25,7 @@ if(Meteor.isClient) {
 			var movie = movies[randomInt];
 			
 			// return the movie
-            Session.set('moviePath', movie)
+            		Session.set('moviePath', movie)
 			//return movie
     	}
     });
