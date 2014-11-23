@@ -17,12 +17,12 @@
       <form id="addMovieForm">
         <div class="form-group">
           <label for="movieTitle" class="control-label">Movie Title</label>
-          <input type="text" name="movieTitle">
+          <input type="text" name="movieTitle" class="form-control">
           <span class="help-block">Enter the movie title as it should appear in a movie list.</span>
         </div>
         <div class="form-group">
           <label for="movieUrl" class="control-label">Movie Url</label>
-          <input type="text" name="movieUrl">
+          <input type="text" name="movieUrl" class="form-control">
           <span class="help-block">Enter the movie address. E.g. http://example.com/movie</span>
         </div>
           <button type="submit" class="btn btn-success btn-block">Add Movie</button>
@@ -33,7 +33,7 @@
 <template name="movieList">
     <ul>
         {{#each movie}}
-        <li><a class="btn btn-xs btn-info" href="{{path}}" target="_blank"><span class="glyphicon glyphicon-link"></span>{{title}}</a><a href="#" class="btn btn-xs btn-danger remove"><span class="glyphicon glyphicon-trash"></span> Delete</a></li>
+        <li><a class="btn btn-info btn-block" href="{{path}}" target="_blank"><span class="glyphicon glyphicon-link"></span>{{title}}</a><a href="#" class="btn btn-xs btn-danger remove"><span class="glyphicon glyphicon-trash"></span> Delete</a></li>
         {{/each}}
     </ul>
 </template>
@@ -46,6 +46,6 @@
       <a href="#" class="btn btn-warning randomize"><span class="glyphicon glyphicon-film"></span> Get random movie</a>
     </div>
     <div class="well">
-      <a href="{{movie}}">{{movie}}</a>
+      <a href="{{movie}}"><span class="glyphicon glyphicon-star-empty"</span> {{movie}}</a>
     </div>
 </template>
